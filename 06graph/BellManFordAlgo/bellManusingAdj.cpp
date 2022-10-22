@@ -67,7 +67,7 @@ int main()
 
     vector<int> dist(n, INF);
 
-    vector<pair<int,int>> edges[100005];
+    vector<pair<int, int>> edges[100005];
 
     for (int i = 0; i < m; i++)
     {
@@ -88,21 +88,17 @@ int main()
     dist[source] = 0;
 
     bool change = false;
-
+    int x=0;
     for (int i = 0; i < n; i++)
     {
 
-        for (auto it : edges[source])
+        for (auto it : edges[i])
         {
-             int v = it.first;
-            cout << "child_v---->" << endl;
+            cout<<"i--->"<<i<<endl;
+            cout<<"x-->"<<++x<<endl;
+            int v = it.first;
+
             int w = it.second;
-           
-           /*  int u = edges[i][0];
-
-            int v = it[1];
-
-            int w = it[2]; */
 
             if (dist[v] > dist[i] + w)
             {

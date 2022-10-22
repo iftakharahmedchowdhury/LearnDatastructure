@@ -89,11 +89,13 @@ int main()
 
     bool change = false;
    int x=0;
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
     {
 
         for (auto it : edges)
         {
+            cout<<"i--->"<<i<<endl;
+            cout<<"x-->"<<++x<<endl;
 
             int u = it[0];
 
